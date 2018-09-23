@@ -29,33 +29,31 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface Marquee {
-      'first': string;
-      'last': string;
+    interface MyMarquee {
+      'dir': string;
     }
   }
 
-  interface HTMLMarqueeElement extends StencilComponents.Marquee, HTMLStencilElement {}
+  interface HTMLMyMarqueeElement extends StencilComponents.MyMarquee, HTMLStencilElement {}
 
-  var HTMLMarqueeElement: {
-    prototype: HTMLMarqueeElement;
-    new (): HTMLMarqueeElement;
+  var HTMLMyMarqueeElement: {
+    prototype: HTMLMyMarqueeElement;
+    new (): HTMLMyMarqueeElement;
   };
   interface HTMLElementTagNameMap {
-    'marquee': HTMLMarqueeElement;
+    'my-marquee': HTMLMyMarqueeElement;
   }
   interface ElementTagNameMap {
-    'marquee': HTMLMarqueeElement;
+    'my-marquee': HTMLMyMarqueeElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'marquee': JSXElements.MarqueeAttributes;
+      'my-marquee': JSXElements.MyMarqueeAttributes;
     }
   }
   namespace JSXElements {
-    export interface MarqueeAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
+    export interface MyMarqueeAttributes extends HTMLAttributes {
+      'dir'?: string;
     }
   }
 }
