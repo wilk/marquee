@@ -1,0 +1,48 @@
+body { margin: 20px; }
+
+.marquee-left, .marquee-right {
+  height: 25px;
+  width: 420px;
+
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes marquee-left {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+@keyframes marquee-right {
+  0% { right: 0; }
+  100% { right: -100%; }
+}
+
+.marquee-left span, .marquee-right span {
+  width: 50%;
+}
+
+.marquee-left span {
+  float: left;
+}
+
+.marquee-left div, .marquee-right div {
+  display: block;
+  width: 200%;
+  height: 30px;
+
+  position: absolute;
+  overflow: hidden;
+}
+
+.marquee-right span {
+  float: right;
+}
+
+.marquee-left div {
+  animation: marquee-left 5s linear infinite;
+}
+
+.marquee-right div {
+  animation: marquee-right 5s linear infinite;
+}
